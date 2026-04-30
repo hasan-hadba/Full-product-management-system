@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <title>hadba Stock System</title>
+</head>
+<body>
+    <!-- container -->
+    <div class="crud">
+        <!-- titles -->
+        <div class="head">
+          <h1><span>hadba</span> <span>St<span class="design">oc</span>k</span> <span>system</span></h1>
+          <p>Full product management system</p>  
+        </div>
+        <!-- inputs -->
+        <div class="inputs">
+           <input type="text" id="title" placeholder="title">
+           <!-- price inputs -->
+           <div class="price">
+            <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+            <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+            <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+            <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+            <small id="total"></small> <!-- total -->
+           </div> 
+           <input type="number" id="count" placeholder="count">
+           <input type="text" id="category" placeholder="category">
+           <button id="submit">create</button>
+        </div>
+        <!-- outputs -->
+        <div class="outputs">
+            <div class="dashboard" id="dashboard">
+                <div class="stat-item">
+                    <span>Total Products: </span>
+                    <span id="stats-count">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>Total Value: </span>
+                    <span id="stats-value">0</span>
+                </div>
+            </div>
+            <!-- search section -->
+            <div class="searchBlock">
+                <input type="search" onkeyup="searchData(this.value)" id="search" placeholder="search">
+                <!-- tow search buttons -->
+                 <div class="btnsearch">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">search by title</button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory">search by category</button>
+                 </div>
+            </div>
+            <div id="deleteAll">
+              
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="system.js"></script>
+</body>
+</html>
