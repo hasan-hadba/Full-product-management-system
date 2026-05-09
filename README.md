@@ -1,6 +1,8 @@
 # hadba Stock System 🚀
 A modern, fully functional CRUD (Create, Read, Update, Delete) application for product management.
 
+> **Live Preview:** [hasan-hadba.github.io/Full-product-management-system/](https://hasan-hadba.github.io/Full-product-management-system/)
+
 ## Features ✨
 *   **Product Management**: Easily add, update, and delete products from your inventory[cite: 3].
 *   **Auto-Calculation**: Real-time calculation of total price based on price, taxes, ads, and discounts[cite: 3].
